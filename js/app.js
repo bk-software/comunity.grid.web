@@ -369,8 +369,11 @@ class CommunityCardApp {
     }
 
     async getCardBalance(barcode) {
-
-        const url = 'https://europe-west1-community-card-dev.cloudfunctions.net/getCardBalance';
+        // Dev url
+        // const url = 'https://europe-west1-community-card-dev.cloudfunctions.net/getCardBalance';
+        
+        // Production URL
+        const url = 'https://europe-west1-community-grid-production.cloudfunctions.net/getCardBalance';
 
         const response = await fetch(url, {
             method: 'POST', // Corresponds to -X POST
